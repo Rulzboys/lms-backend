@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_modules",
+  "info": {
+    "singularName": "training-module",
+    "pluralName": "training-modules",
+    "displayName": "training-module"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "video_url": {
+      "type": "text"
+    }
+  }
+}
