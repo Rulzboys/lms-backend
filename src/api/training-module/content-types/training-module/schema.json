@@ -21,7 +21,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::question.question",
-      "mappedBy": "training_module"
+      "mappedBy": "training-module"
     }
   }
 }

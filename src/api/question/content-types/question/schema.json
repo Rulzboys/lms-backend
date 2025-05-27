@@ -22,7 +22,7 @@
       "type": "string",
       "required": true
     },
-    "training_module": {
+   "training_module": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::training-module.training-module",
