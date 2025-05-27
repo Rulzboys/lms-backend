@@ -1,28 +1,32 @@
 {
-  "kind": "collectionType",
   "collectionName": "questions",
   "info": {
     "singularName": "question",
     "pluralName": "questions",
-    "displayName": "question"
+    "displayName": "Question",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
-    "question": {
-      "type": "text"
+    "text": {
+      "type": "string",
+      "required": true
     },
     "options": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
-    "answer_index": {
-      "type": "integer"
+    "answer": {
+      "type": "string",
+      "required": true
     },
     "training_module": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::training-module.training-module"
+      "relation": "manyToOne",
+      "target": "api::training-module.training-module",
+      "inversedBy": "questions"
     }
   }
 }

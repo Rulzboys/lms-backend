@@ -1,23 +1,27 @@
 {
-  "kind": "collectionType",
   "collectionName": "training_modules",
   "info": {
     "singularName": "training-module",
     "pluralName": "training-modules",
-    "displayName": "training-module"
+    "displayName": "Training Module",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "blocks"
-    },
-    "video_url": {
       "type": "text"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "training_module"
     }
   }
 }
